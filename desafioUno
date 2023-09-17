@@ -1,0 +1,45 @@
+// requisitos para ir a la guerra:
+// edad > 18 && edad <35
+// salud === 'buena'
+// antecedentes === false
+// apellido !== apellidoRey
+
+
+const arregloPersonas = [ 
+
+    {
+        nombre: 'Andres',
+        edad : 17,
+        salud : "buena",
+        antecedentes : false,
+        apellido: 'ApellidoRey',
+    }, 
+    
+     {
+        nombre: 'Raul',
+        edad : 22,
+        salud : "buena",
+        antecedentes : false,
+        apellido: 'Perez',
+    },
+    {
+        nombre: 'Javier',
+        edad : 33,
+        salud : "buena",
+        antecedentes : true,
+        apellido: 'Gonzalez',
+    }
+    
+    ]
+    
+    function aplicaGuerra (personaX){
+     if (personaX.edad > 18 && personaX.edad <35 && personaX.salud === 'buena' && personaX.antecedentes === false && personaX.apellido !== 'ApellidoRey' ){
+        return personaX.nombre + ' ' +  personaX.apellido + ' es apto para el ejército';
+     } else {return 'no es apto para la guerra';
+    }
+    
+    }
+    
+    console.log(aplicaGuerra(arregloPersonas[0]))
+    console.log(aplicaGuerra(arregloPersonas[1]))
+    console.log(aplicaGuerra(arregloPersonas[2]))
