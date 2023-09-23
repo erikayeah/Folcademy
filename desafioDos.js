@@ -27,10 +27,15 @@ fetch('https://dummyjson.com/users?limit=100')
     console.log(`La cantidad de usuarios encuestados es de: ${users.length}`);
 
 //Funcion forEach
-    users.forEach(persona => {
-        console.log(`${persona.firstName} ${persona.lastName} tiene una edad de ${persona.age}`)});
-    })
-
-//Para manejar errores que puedan ocurrir al pedir datos a través de la API
+users.forEach(persona => {
+    console.log(`Nombre completo: ${persona.firstName} ${persona.lastName}`);
+    console.log(`Edad: ${persona.age} años`);
+    console.log(`Género: ${persona.gender}`);
+    console.log(`Email: ${persona.email}`);
+    console.log(`Teléfono: ${persona.phone}`);
+    console.log('---'); // Separacion de usuarios
+})
+  })
+//Para manejar errores que puedan ocurrir al pedir datos a traves de la API
   .catch(error => console.error('Hubo un error al obtener los datos:', error));
 
