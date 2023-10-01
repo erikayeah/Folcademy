@@ -1,0 +1,39 @@
+
+function fetchDataFromAPI(apiUrl) {
+    return new Promise((resolve, reject) => {
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            reject(new Error('No se pudo obtener la información de la API'));
+          }
+          return response.json();
+        })
+        .then(data => {
+          resolve(data);
+        })
+        .catch(error => {
+          reject(error);
+        });
+    });
+  }
+  
+  
+  async function processData() {
+    try {
+      const apiUrl = 'https://fakestoreapi.com/products';
+      const datosProductos = await fetchDataFromAPI(apiUrl);
+  
+      
+      const nombresProductos = datosProductos.map(product => product.title);
+      const productosBaratos = datosProductos.filter(product => product.price < 20);
+  
+      console.log('Nombres de productos:', nombresProductos);
+      console.log('Productos económicos:', productosBaratos);
+  
+    } catch (error) {
+      console.error('Ocurrió un error:', error);
+    }
+  }
+  
+ 
+  processData();
