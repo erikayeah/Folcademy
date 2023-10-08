@@ -1,0 +1,15 @@
+
+.claseUno {
+    color: #66ffe5;
+    font-size: 18px; 
+  }
+  
+
+  .claseDos {
+    background-color: #005878;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  
+  
