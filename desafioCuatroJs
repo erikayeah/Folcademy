@@ -1,0 +1,29 @@
+document.addEventListener('DOMContentLoaded', function() {
+ 
+    const nosotros = document.getElementById('nosotros');
+    if (nosotros) {
+      nosotros.textContent = 'somos la empresa líder en vanguardia tecnológica.';
+    }
+
+    const misionEmpresa = document.getElementById('mision-empresa');
+    if (misionEmpresa) {
+      misionEmpresa.textContent = 'Nuestra misión es liderar la innovación en software.';
+    }
+    
+    const correoContacto = document.getElementById('correo-contacto');
+    if (correoContacto) {
+      correoContacto.textContent = 'contacto@chechinesadvance.com';
+    }
+  
+    const facebookLink = document.getElementById('facebook-link');
+    if (facebookLink) {
+      facebookLink.remove();
+    }
+
+    const derechosReservados = document.querySelectorAll('.claseUno');
+    derechosReservados.forEach(elemento => {
+        elemento.textContent = 'Todos los derechos reservados';
+      });
+      
+  });
+  
